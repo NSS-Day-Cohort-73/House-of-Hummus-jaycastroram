@@ -56,10 +56,13 @@ sequenceDiagram
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Should transient state be represented in a database diagram? Why, or why not?
-   > Your answer here
+   > It's important to make sure where youre data is being held at all times however transiet state is just temperory and is only a place holder for the data that will be finalized in posted to the server.
+
 2. In the **FoodTruck** module, you are **await**ing the invocataion of all of the component functions _(e.g. sales, veggie options, etc.)_. Why must you use the `await` keyword there? Explain what happens if you remove it.
-   > Your answer here
+   > Await does what is sounds like it does. it waits for the the data to fetch properly before attempting to render the data. this allows the data we fetch to also be changed from a promise object to JSON where it can be read by javascript and then rendered. without this we would have a promise object that will display instead of a html string.
+
 3. When the user is making choices by selecting radio buttons, explain how that data is retained so that the **Purchase Combo** button works correctly.
-   > Your answer here
+   > The selections are held in a transiet sate on the api server until all selections are made and the purchase combo click event is invoked. once that happens all the transiet data is pooled to create a new object that has the key values we need in order to display the total of the objects specified key values.
+
 4. You used the `map()` array method in the self assessment _(at least, you should have since it is a learning objective)_. Explain why that function is helpful as a replacement for a `for..of` loop.
-   > Your answer here
+   > map() creats a new array that does not affect the orignal dataset and thus can be used freely for the single operations that are occuring in the function.

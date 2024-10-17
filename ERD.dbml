@@ -1,0 +1,22 @@
+Table BaseDish {
+    id int [pk, increment]
+    name varchar
+    price int [ref: > Purchases.totalPrice]
+}
+Table Vegatable {
+    id int [pk, increment]
+    name varchar
+    price int [ref: > Purchases.totalPrice]
+}
+Table SideDish {
+    id int [pk, increment]
+    name varchar
+    price int [ref: > Purchases.totalPrice]
+}
+Table Purchases {
+    id int [pk, increment]
+    BaseDishId int [ref: > BaseDish.id]
+    VegatableId int [ref: > Vegatable.id]
+    SideDishId int [ref: > SideDish.id]
+    totalPrice int 
+}
